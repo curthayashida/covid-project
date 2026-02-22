@@ -1,5 +1,7 @@
 import pandas as pd
+file_path = r"C:\Personal\Data_Analysis\Covid_Project\time_series_covid19_confirmed_US.csv"
 
+df = pd.read_csv(file_path)
 def total_cases_end_of_year_multi(df, states, years):
     
     df = df.copy()
@@ -38,4 +40,5 @@ states = ['CA', 'TX', 'NY', 'FL', 'IL', 'GA', 'WA', 'SD']
 years = [2020, 2021, 2022, 2023]
 
 cases_df = total_cases_end_of_year_multi(df, states, years)
+
 print(cases_df)
